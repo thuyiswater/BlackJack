@@ -10,22 +10,23 @@ import Combine
 
 class StrategyController: ObservableObject {
     typealias Data = [String: [String: String]]
-    
-    @Published var jsonSplit: JSON?
-    @Published var jsonSoft: JSON?
-    @Published var jsonHard: JSON?
+
     @Published var showHint = false
-    
+
+    private var jsonHard: JSON?
+    private var jsonSoft: JSON?
+    private var jsonSplit: JSON?
+
     var hardHands: Data {
-        guard let jsonHard = jsonHard else {return .init() }
+        guard let jsonHard = jsonHard else { return .init() }
         return createDictionaryOfDictionaries(from: jsonHard)
     }
-    
+
     var softHands: Data {
-        guard let jsonSoft = jsonSoft else {return .init() }
+        guard let jsonSoft = jsonSoft else { return .init() }
         return createDictionaryOfDictionaries(from: jsonSoft)
     }
-    
+
     var splitHands: Data {
         guard let jsonSplit = jsonSplit else { return .init() }
         return createDictionaryOfDictionaries(from: jsonSplit)
@@ -40,7 +41,7 @@ class StrategyController: ObservableObject {
         }
         return nil
     }
-    
+
     func load() {
         jsonHard = loadFromPath(forResource: "BasicStrategy_Hard")
         jsonSoft = loadFromPath(forResource: "BasicStrategy_Soft")
@@ -53,11 +54,10 @@ class StrategyController: ObservableObject {
         jsonSplit = nil
     }
 
-    
     private func createDictionaryOfDictionaries(from json: JSON) -> Data {
-        json.dictionary.mapValues {$0.dictionary.mapValues {$0.string}}
+        json.dictionary.mapValues { $0.dictionary.mapValues { $0.string } }
     }
-    
+
     func generateHint(playerCards: [CardState], dealerCards: [CardState]) -> String? {
         let playerCardsBlackjackCount = playerCards.blackJackCount
         let dealerCardsBlackjackCount = dealerCards.blackJackCount

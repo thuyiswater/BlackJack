@@ -9,24 +9,25 @@ import SwiftUI
 
 struct CardStack: View {
     var cardSize: CGFloat = 125
-    
+
     @EnvironmentObject var gameController: GameController
+
     @Binding var cards: [CardState]
-    
+
     var didBust: Bool = false
     var showBetAmount: Bool = false
-    
+
     var count: String {
-        if case.outcome(_) = gameController.gameState {
+        if case .outcome(_) = gameController.gameState {
             return cards.blackJackCount.hardText
         }
         return cards.blackJackCount.softText
     }
-    
+
     var animate: Bool {
         gameController.gameState != .betting
     }
-    
+
     var body: some View {
         VStack {
             ZStack {
@@ -35,15 +36,16 @@ struct CardStack: View {
                         .frame(width: cardSize, height: cardSize)
                         .offset(x: CGFloat(index) * cardSize / 2.5)
                         .transition(
-                            .asymmetric(insertion: .move(edge: .trailing),
-                                        removal: .opacity
+                            .asymmetric(
+                                insertion: .move(edge: .trailing),
+                                removal: .opacity
                             )
                         )
                         .animation(animate ? .linear : .none)
                 }
                 .transition(.opacity)
-                
-                if cards.contains {!$0.isHidden} {
+
+                if cards.contains { !$0.isHidden } {
                     Text(count)
                         .foregroundColor(.black)
                         .padding()
@@ -81,9 +83,10 @@ struct CardStack: View {
     }
 }
 
+
 struct CardStack_Previews: PreviewProvider {
     @State static var cards = [CardState(isHidden: false), CardState(isHidden: false)]
-    
+
     static var previews: some View {
         CardStack(cards: $cards)
     }

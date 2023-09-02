@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BetAmountView: View {
     @EnvironmentObject var gameController: GameController
-    
+
     var body: some View {
         HStack {
             Image("bet-coin")
@@ -17,7 +17,6 @@ struct BetAmountView: View {
                 .frame(width: 30, height: 30)
             Text("$\(gameController.bettingAmount)")
                 .bold()
-                .font(.custom("Poppins-Light", size: 20))
                 .foregroundColor(.white)
         }
     }
@@ -28,3 +27,4 @@ struct BetAmountView_Previews: PreviewProvider {
         BetAmountView()
     }
 }
+

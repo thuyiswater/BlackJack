@@ -8,97 +8,100 @@
 import Foundation
 import SwiftUI
 
-struct Card: Identifiable, Hashable, CustomDebugStringConvertible{
+struct Card: Identifiable, Hashable, CustomDebugStringConvertible {
     var debugDescription: String {
         "\(value.display)\(suit.rawValue)"
     }
-    
+
     enum Suit: String, Hashable, CaseIterable {
         case heart
         case diamond
-        case club
         case spade
-        
+        case club
+
         var imageName: String {
             switch self {
-            case.heart:
+            case .heart:
                 return "suit.heart.fill"
-            case.diamond:
+            case .diamond:
                 return "suit.diamond.fill"
-            case.club:
-                return "suit.club.fill"
-            case.spade:
+            case .spade:
                 return "suit.spade.fill"
+            case .club:
+                return "suit.club.fill"
             }
         }
-        
-        var cardColor: Color {
+
+        var color: Color {
             switch self {
-            case.heart, .diamond:
-                return .red
-            case.club, .spade:
+            case .club, .spade:
                 return .black
+            case .heart, .diamond:
+                return .red
             }
         }
     }
-    
+
     enum Value: Hashable, Equatable {
-        static let allCases: [Value] = [ .ace, .king, .queen, .jack] + (2...10).map {.number($0)}
-        
+        static let allCases: [Value] = [
+            .ace, .king, queen, .jack
+        ] + (2...10).map { .number($0) }
+
         case ace
         case king
         case queen
         case jack
         case number(Int)
-        
+
         var display: String {
             switch self {
-            case.ace:
+            case .ace:
                 return "A"
-            case.king:
-                return "k"
-            case.queen:
+            case .king:
+                return "K"
+            case .queen:
                 return "Q"
-            case.jack:
+            case .jack:
                 return "J"
-            case.number(let value):
+            case .number(let value):
                 return "\(value)"
             }
         }
-        
+
         var number: Int {
             switch self {
-            case.ace:
+            case .ace:
                 return 1
-            case.king, .queen, .jack:
+            case .jack, .queen, .king:
                 return 10
-            case.number(let value):
+            case .number(let value):
                 return value
             }
         }
+
         static func == (lhs: Value, rhs: Value) -> Bool {
-            return lhs.number == rhs.number;
+            return lhs.number == rhs.number
         }
     }
-    
+
     let id = UUID()
     let value: Value
     let suit: Suit
-    
+
     init() {
         value = Value.allCases.randomElement()!
         suit = Suit.allCases.randomElement()!
     }
-    
-    init(value: Value, suit: Suit){
+
+    init(value: Value, suit: Suit) {
         self.value = value
         self.suit = suit
     }
-    
+
     func isEquivalentInValue(to other: Card) -> Bool {
         value.number == other.value.number
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
         hasher.combine(value)

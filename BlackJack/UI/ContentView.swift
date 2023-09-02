@@ -2,35 +2,37 @@
 //  ContentView.swift
 //  BlackJack
 //
-//  Created by mai chieu thuy on 11/08/2023.
+//  Created by Austin Evans on 4/13/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+
     @EnvironmentObject var gameController: GameController
     @EnvironmentObject var strategyController: StrategyController
-    
+
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .foregroundColor: UIColor.white
         ]
     }
-    
+
     var body: some View {
         ZStack {
             Color("background")
                 .ignoresSafeArea()
+
             VStack {
-                TitleView("BlackJack♦️♥️♠️♣️")
-                
+                TitleView("Speed Blackjack")
+
                 MoneyBoxView(amount: 2500)
-                
+
                 HouseCardStack()
                 PlayerCardStacks()
-                
+
                 Spacer()
-                
+
                 if gameController.gameState == .betting {
                     CoinDeckView()
                         .padding(.vertical, 32)
@@ -41,49 +43,60 @@ struct ContentView: View {
                         .padding(.bottom, 32)
                 }
             }
-            
+
             if gameController.showDirections {
                 Color.black.opacity(0.5)
                     .edgesIgnoringSafeArea(.all)
                     .onTapGesture {
                         gameController.showDirections.toggle()
                     }
+
                 InfoView()
             }
-            
+
             if gameController.showSettings {
                 Color.black.opacity(0.5)
                     .edgesIgnoringSafeArea(.all)
                     .onTapGesture {
                         gameController.showSettings.toggle()
                     }
-                SettingsView()
+
+                SettingView()
             }
         }
     }
-    
+
     var outcomeText: String {
-        if case.outcome(let outcome) = gameController.gameState {
+        if case .outcome(let outcome) = gameController.gameState {
             return outcome.description
         }
         return "-"
     }
-    
+
     var outcomeButtons: some View {
         Group {
             Text(outcomeText)
                 .foregroundColor(.white)
-                .font(.custom("Poppins-Light", size: 20))
                 .bold()
                 .fixedSize(horizontal: false, vertical: true)
-            
+
             HStack {
-                Button (action: {
+                Button(action: {
                     gameController.change(to: .betting)
                 }, label: {
-                Text("Rebet")
+                    Text("Rebet")
                         .bold()
-                        .font(.custom("Poppins-Light", size: 17))
+                })
+                .frame(minWidth: 100)
+                .padding()
+                .background(Color.white.cornerRadius(8))
+
+                Button(action: {
+                    gameController.reset()
+                    gameController.change(to: .playerTurn)
+                }, label: {
+                    Text("Rebet and deal")
+                        .bold()
                 })
                 .frame(minWidth: 100)
                 .padding()
@@ -92,7 +105,7 @@ struct ContentView: View {
         }
         .opacity(outcomeText == "-" ? 0 : 1)
     }
-    
+
     var hintText: String {
         let hint = strategyController.generateHint(
             playerCards: gameController.playerCards,
@@ -115,7 +128,7 @@ struct ContentView: View {
 
         return "Hint: \(word.capitalized)"
     }
-    
+
     var hints: some View {
         Group {
             if strategyController.showHint {

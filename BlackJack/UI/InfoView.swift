@@ -9,8 +9,8 @@ import SwiftUI
 
 struct InfoView: View {
     @EnvironmentObject var gameController: GameController
-    
-    static let intro = """
+
+    static let introduction = """
 Overview:
 
 The rules of blackjack are simple. Your goal is to get your deck of cards as close as you can to 21 without going over.
@@ -52,14 +52,15 @@ If there is a tie in the player card count and dealer card count, you have a pus
 
 Blackjacks result in 1.5 times the amount you bet.
 """
-    
+
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color("background"))
-            
+
             ScrollView {
-                VStack (alignment: .center) {
+                VStack(alignment: .center) {
                     HStack {
                         Spacer()
                         Image(systemName: "xmark.circle.fill")
@@ -67,28 +68,26 @@ Blackjacks result in 1.5 times the amount you bet.
                             .foregroundColor(.white)
                             .frame(width: 30, height: 30)
                             .padding([.top, .trailing])
-                            .accessibilityAddTraits(.isButton)
+                            .accessibility(addTraits: .isButton)
                             .onTapGesture {
                                 gameController.showDirections.toggle()
                             }
                     }
-                    
                     Image("app-icon")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .shadow(radius: 16)
                         .cornerRadius(24)
                         .padding()
-                    
-                    Text("Welcome To BlackJack")
-                        .bold()
+
+                    Text("Welcome to BlackJack")
                         .font(.custom("Poppins-Medium", size: 25))
+                        .bold()
                         .foregroundColor(.white)
                         .padding()
-                    
-                    Text(InfoView.intro)
+
+                    Text(InfoView.introduction)
                         .bold()
-                        .font(.custom("Poppins-Light", size: 15))
                         .multilineTextAlignment(.leading)
                         .foregroundColor(.white)
                         .padding()
@@ -100,8 +99,9 @@ Blackjacks result in 1.5 times the amount you bet.
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
+struct Info_Previews: PreviewProvider {
     static var previews: some View {
         InfoView()
+            .frame(width: 200, height: 500)
     }
 }

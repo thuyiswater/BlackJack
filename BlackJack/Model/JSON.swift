@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Adapted from Hacking with Swift+ `Parsing difficult JSON`
+/// https://www.hackingwithswift.com/plus/working-with-data/parsing-difficult-json
 @dynamicMemberLookup
 struct JSON: RandomAccessCollection {
     var value: Any?

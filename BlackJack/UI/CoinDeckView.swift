@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoinDeckView: View {
     @EnvironmentObject var gameController: GameController
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -20,9 +20,8 @@ struct CoinDeckView: View {
                         .frame(minWidth: 100)
                         .padding()
                         .background(Color.white.cornerRadius(8))
-                        .font(.custom("Poppins-Light", size: 15))
                 })
-                
+
                 Button(action: {
                     gameController.change(to: .playerTurn)
                 }, label: {
@@ -32,7 +31,6 @@ struct CoinDeckView: View {
                         .background(Color.white.cornerRadius(8))
                 })
             }
-            
             HStack {
                 CoinView(amount: 500)
                 CoinView(amount: 100)

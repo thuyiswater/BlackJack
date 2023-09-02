@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HouseCardStack: View {
     @EnvironmentObject var gameController: GameController
+
     var body: some View {
         CardStack(cards: $gameController.houseCards,
-                          didBust: gameController.houseBust)
-                    .padding(.bottom, 32)
+                  didBust: gameController.houseBust)
+            .padding(.bottom, 32)
     }
 }
 

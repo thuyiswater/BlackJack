@@ -7,35 +7,34 @@
 
 import Foundation
 
-
 enum GameState: Equatable {
-    enum OutComeState: Equatable {
+    enum OutcomeState: Equatable {
         case houseWin
         case playerWin
         case houseBust
         case playerBust
         case push
-        case houseBlackJack
-        case playerBlackJack
-        case multiple ([OutComeState])
-        
+        case playerBlackjack
+        case houseBlackjack
+        case multiple([OutcomeState])
+
         var description: String {
             switch self {
-            case.houseWin:
-                return "The House Win 🙁"
-            case.playerWin:
+            case .houseWin:
+                return " The House wins 🙁"
+            case .playerWin:
                 return "You win! 🎉"
-            case.houseBust:
+            case .houseBust:
                 return "You win. The House busted. 🥳"
-            case.playerBust:
-                return "The House wins. You busted. 🪦"
-            case.push:
+            case .playerBust:
+                return "Dealer wins. You busted. 🪦"
+            case .push:
                 return "Push. 👉👈"
-            case.houseBlackJack:
+            case .playerBlackjack:
+                return "Wooo! You got a Blackjack! 🎰"
+            case .houseBlackjack:
                 return "No luck. The House Blackjack. 🎰"
-            case.playerBlackJack:
-                return "Yasss! You got a Blackjack! 🎰"
-            case.multiple(let outcomes):
+            case .multiple(let outcomes):
                 return outcomes.enumerated().reduce(into: "") { (acc, element) in
                     let (index, outcome) = element
                     acc += "\(index + 1)) \(outcome.description)\n"
@@ -43,17 +42,19 @@ enum GameState: Equatable {
             }
         }
     }
-    
+
     case betting
+
     case playerTurn
     case houseTurn
-    case outcome(OutComeState)
-    
+
+    case outcome(OutcomeState)
+
     var description: String {
         switch self {
-        case.betting, .playerTurn, .houseTurn:
+        case .betting, .playerTurn, .houseTurn:
             return "\(self)"
-        case.outcome(let outcome):
+        case .outcome(let outcome):
             return "Outcome: \(outcome.description)"
         }
     }

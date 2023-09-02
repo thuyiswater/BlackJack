@@ -12,7 +12,7 @@ enum GameActionType: String {
     case split
     case hit
     case stand
-    
+
     var name: String {
         return rawValue.capitalized
     }

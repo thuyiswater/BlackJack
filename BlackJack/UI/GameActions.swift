@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameActions: View {
     @EnvironmentObject var gameController: GameController
-    
+
     var body: some View {
         HStack {
             GameAction(actionType: .double, onTap: gameController.double)
