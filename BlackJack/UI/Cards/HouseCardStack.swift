@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DealerCardStack: View {
+struct HouseCardStack: View {
     @EnvironmentObject var gameController: GameController
     var body: some View {
         CardStack(cards: $gameController.houseCards,
@@ -16,8 +16,8 @@ struct DealerCardStack: View {
     }
 }
 
-struct DealerCardStack_Previews: PreviewProvider {
+struct HouseCardStack_Previews: PreviewProvider {
     static var previews: some View {
-        DealerCardStack()
+        HouseCardStack()
     }
 }

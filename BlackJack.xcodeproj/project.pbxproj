@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430456C62AA192D500CD4E8B /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430456C52AA192D500CD4E8B /* TitleView.swift */; };
 		4354A9992A8601420095EE7D /* BlackJackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A9982A8601420095EE7D /* BlackJackApp.swift */; };
 		4354A99B2A8601420095EE7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354A99A2A8601420095EE7D /* ContentView.swift */; };
 		4354A99D2A8601430095EE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4354A99C2A8601430095EE7D /* Assets.xcassets */; };
@@ -18,7 +19,7 @@
 		4354FEB72A985F1D00D8AAB2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEB62A985F1D00D8AAB2 /* CardView.swift */; };
 		4354FEB92A98606C00D8AAB2 /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEB82A98606C00D8AAB2 /* CardStack.swift */; };
 		4354FEBC2A9860ED00D8AAB2 /* CardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEBB2A9860ED00D8AAB2 /* CardState.swift */; };
-		4354FEBE2A9861A400D8AAB2 /* DealerCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEBD2A9861A400D8AAB2 /* DealerCardStack.swift */; };
+		4354FEBE2A9861A400D8AAB2 /* HouseCardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEBD2A9861A400D8AAB2 /* HouseCardStack.swift */; };
 		4354FEC02A9861FF00D8AAB2 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEBF2A9861FF00D8AAB2 /* GameController.swift */; };
 		4354FEC22A98653B00D8AAB2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEC12A98653B00D8AAB2 /* GameState.swift */; };
 		4354FEC42A98899C00D8AAB2 /* GameActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FEC32A98899C00D8AAB2 /* GameActionType.swift */; };
@@ -28,6 +29,40 @@
 		4354FECE2A98A02D00D8AAB2 /* BasicStrategy_Soft.json in Resources */ = {isa = PBXBuildFile; fileRef = 4354FECB2A98A02D00D8AAB2 /* BasicStrategy_Soft.json */; };
 		4354FED02A98A06200D8AAB2 /* StrategyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FECF2A98A06200D8AAB2 /* StrategyController.swift */; };
 		4354FED22A98A42600D8AAB2 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4354FED12A98A42600D8AAB2 /* JSON.swift */; };
+		43F7F8BD2AA1958700ACC0C3 /* MoneyBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8BC2AA1958700ACC0C3 /* MoneyBoxView.swift */; };
+		43F7F8BF2AA197D600ACC0C3 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7F8BE2AA197D600ACC0C3 /* Poppins-Light.ttf */; };
+		43F7F8C02AA197D600ACC0C3 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7F8BE2AA197D600ACC0C3 /* Poppins-Light.ttf */; };
+		43F7F8C12AA197D600ACC0C3 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43F7F8BE2AA197D600ACC0C3 /* Poppins-Light.ttf */; };
+		43F7F8C32AA19B9D00ACC0C3 /* BetAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8C22AA19B9D00ACC0C3 /* BetAmountView.swift */; };
+		43F7F8C42AA19B9D00ACC0C3 /* BetAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8C22AA19B9D00ACC0C3 /* BetAmountView.swift */; };
+		43F7F8C52AA19B9D00ACC0C3 /* BetAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8C22AA19B9D00ACC0C3 /* BetAmountView.swift */; };
+		43F7F8C72AA19CC000ACC0C3 /* CoinDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8C62AA19CC000ACC0C3 /* CoinDeckView.swift */; };
+		43F7F8C82AA19CC000ACC0C3 /* CoinDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8C62AA19CC000ACC0C3 /* CoinDeckView.swift */; };
+		43F7F8C92AA19CC000ACC0C3 /* CoinDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8C62AA19CC000ACC0C3 /* CoinDeckView.swift */; };
+		43F7F8CB2AA19DE500ACC0C3 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8CA2AA19DE500ACC0C3 /* CoinView.swift */; };
+		43F7F8CC2AA19DE500ACC0C3 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8CA2AA19DE500ACC0C3 /* CoinView.swift */; };
+		43F7F8CD2AA19DE500ACC0C3 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8CA2AA19DE500ACC0C3 /* CoinView.swift */; };
+		43F7F8CF2AA19FA200ACC0C3 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8CE2AA19FA200ACC0C3 /* GameAction.swift */; };
+		43F7F8D02AA19FA200ACC0C3 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8CE2AA19FA200ACC0C3 /* GameAction.swift */; };
+		43F7F8D12AA19FA200ACC0C3 /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8CE2AA19FA200ACC0C3 /* GameAction.swift */; };
+		43F7F8D32AA1A22800ACC0C3 /* GameActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8D22AA1A22800ACC0C3 /* GameActions.swift */; };
+		43F7F8D42AA1A22800ACC0C3 /* GameActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8D22AA1A22800ACC0C3 /* GameActions.swift */; };
+		43F7F8D52AA1A22800ACC0C3 /* GameActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8D22AA1A22800ACC0C3 /* GameActions.swift */; };
+		43F7F8D72AA1A4DA00ACC0C3 /* PlayerCardStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8D62AA1A4DA00ACC0C3 /* PlayerCardStacks.swift */; };
+		43F7F8D82AA1A4DA00ACC0C3 /* PlayerCardStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8D62AA1A4DA00ACC0C3 /* PlayerCardStacks.swift */; };
+		43F7F8D92AA1A4DA00ACC0C3 /* PlayerCardStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8D62AA1A4DA00ACC0C3 /* PlayerCardStacks.swift */; };
+		43F7F8DB2AA1A90C00ACC0C3 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8DA2AA1A90C00ACC0C3 /* FlipView.swift */; };
+		43F7F8DC2AA1A90C00ACC0C3 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8DA2AA1A90C00ACC0C3 /* FlipView.swift */; };
+		43F7F8DD2AA1A90C00ACC0C3 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8DA2AA1A90C00ACC0C3 /* FlipView.swift */; };
+		43F7F8E02AA1AB2500ACC0C3 /* Biding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8DF2AA1AB2500ACC0C3 /* Biding+Equatable.swift */; };
+		43F7F8E12AA1AB2500ACC0C3 /* Biding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8DF2AA1AB2500ACC0C3 /* Biding+Equatable.swift */; };
+		43F7F8E22AA1AB2500ACC0C3 /* Biding+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8DF2AA1AB2500ACC0C3 /* Biding+Equatable.swift */; };
+		43F7F8E42AA2F6D200ACC0C3 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8E32AA2F6D200ACC0C3 /* InfoView.swift */; };
+		43F7F8E52AA2F6D200ACC0C3 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8E32AA2F6D200ACC0C3 /* InfoView.swift */; };
+		43F7F8E62AA2F6D200ACC0C3 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8E32AA2F6D200ACC0C3 /* InfoView.swift */; };
+		43F7F8E92AA2FF8D00ACC0C3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8E82AA2FF8D00ACC0C3 /* SettingView.swift */; };
+		43F7F8EA2AA2FF8D00ACC0C3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8E82AA2FF8D00ACC0C3 /* SettingView.swift */; };
+		43F7F8EB2AA2FF8D00ACC0C3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F7F8E82AA2FF8D00ACC0C3 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430456C52AA192D500CD4E8B /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		4354A9952A8601420095EE7D /* BlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4354A9982A8601420095EE7D /* BlackJackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackApp.swift; sourceTree = "<group>"; };
 		4354A99A2A8601420095EE7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,7 +98,7 @@
 		4354FEB62A985F1D00D8AAB2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4354FEB82A98606C00D8AAB2 /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		4354FEBB2A9860ED00D8AAB2 /* CardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardState.swift; sourceTree = "<group>"; };
-		4354FEBD2A9861A400D8AAB2 /* DealerCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerCardStack.swift; sourceTree = "<group>"; };
+		4354FEBD2A9861A400D8AAB2 /* HouseCardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCardStack.swift; sourceTree = "<group>"; };
 		4354FEBF2A9861FF00D8AAB2 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		4354FEC12A98653B00D8AAB2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		4354FEC32A98899C00D8AAB2 /* GameActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameActionType.swift; sourceTree = "<group>"; };
@@ -72,6 +108,20 @@
 		4354FECB2A98A02D00D8AAB2 /* BasicStrategy_Soft.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BasicStrategy_Soft.json; sourceTree = "<group>"; };
 		4354FECF2A98A06200D8AAB2 /* StrategyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyController.swift; sourceTree = "<group>"; };
 		4354FED12A98A42600D8AAB2 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		43F7F8BA2AA1941400ACC0C3 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		43F7F8BB2AA1949F00ACC0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		43F7F8BC2AA1958700ACC0C3 /* MoneyBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBoxView.swift; sourceTree = "<group>"; };
+		43F7F8BE2AA197D600ACC0C3 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		43F7F8C22AA19B9D00ACC0C3 /* BetAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetAmountView.swift; sourceTree = "<group>"; };
+		43F7F8C62AA19CC000ACC0C3 /* CoinDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeckView.swift; sourceTree = "<group>"; };
+		43F7F8CA2AA19DE500ACC0C3 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		43F7F8CE2AA19FA200ACC0C3 /* GameAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
+		43F7F8D22AA1A22800ACC0C3 /* GameActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameActions.swift; sourceTree = "<group>"; };
+		43F7F8D62AA1A4DA00ACC0C3 /* PlayerCardStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardStacks.swift; sourceTree = "<group>"; };
+		43F7F8DA2AA1A90C00ACC0C3 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		43F7F8DF2AA1AB2500ACC0C3 /* Biding+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Biding+Equatable.swift"; sourceTree = "<group>"; };
+		43F7F8E32AA2F6D200ACC0C3 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		43F7F8E82AA2FF8D00ACC0C3 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +172,15 @@
 		4354A9972A8601420095EE7D /* BlackJack */ = {
 			isa = PBXGroup;
 			children = (
+				43F7F8BB2AA1949F00ACC0C3 /* Info.plist */,
 				4354A9982A8601420095EE7D /* BlackJackApp.swift */,
 				4354FEC82A989F9200D8AAB2 /* BasicStrategy */,
 				4354FEB42A985EFE00D8AAB2 /* UI */,
 				4354FEBA2A9860D800D8AAB2 /* Model */,
+				43F7F8DE2AA1AB1000ACC0C3 /* Extension */,
 				4354A99C2A8601430095EE7D /* Assets.xcassets */,
+				43F7F8BA2AA1941400ACC0C3 /* Poppins-Medium.ttf */,
+				43F7F8BE2AA197D600ACC0C3 /* Poppins-Light.ttf */,
 				4354A99E2A8601430095EE7D /* Preview Content */,
 			);
 			path = BlackJack;
@@ -160,7 +214,16 @@
 		4354FEB42A985EFE00D8AAB2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				43F7F8E72AA2FF6600ACC0C3 /* Settings */,
 				4354A99A2A8601420095EE7D /* ContentView.swift */,
+				430456C52AA192D500CD4E8B /* TitleView.swift */,
+				43F7F8BC2AA1958700ACC0C3 /* MoneyBoxView.swift */,
+				43F7F8C22AA19B9D00ACC0C3 /* BetAmountView.swift */,
+				43F7F8C62AA19CC000ACC0C3 /* CoinDeckView.swift */,
+				43F7F8CA2AA19DE500ACC0C3 /* CoinView.swift */,
+				43F7F8CE2AA19FA200ACC0C3 /* GameAction.swift */,
+				43F7F8D22AA1A22800ACC0C3 /* GameActions.swift */,
+				43F7F8E32AA2F6D200ACC0C3 /* InfoView.swift */,
 				4354FEB52A985F0400D8AAB2 /* Cards */,
 			);
 			path = UI;
@@ -171,7 +234,9 @@
 			children = (
 				4354FEB62A985F1D00D8AAB2 /* CardView.swift */,
 				4354FEB82A98606C00D8AAB2 /* CardStack.swift */,
-				4354FEBD2A9861A400D8AAB2 /* DealerCardStack.swift */,
+				4354FEBD2A9861A400D8AAB2 /* HouseCardStack.swift */,
+				43F7F8D62AA1A4DA00ACC0C3 /* PlayerCardStacks.swift */,
+				43F7F8DA2AA1A90C00ACC0C3 /* FlipView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -199,6 +264,22 @@
 				4354FEC92A98A02D00D8AAB2 /* BasicStrategy_Split.json */,
 			);
 			path = BasicStrategy;
+			sourceTree = "<group>";
+		};
+		43F7F8DE2AA1AB1000ACC0C3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43F7F8DF2AA1AB2500ACC0C3 /* Biding+Equatable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		43F7F8E72AA2FF6600ACC0C3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				43F7F8E82AA2FF8D00ACC0C3 /* SettingView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4354A9A02A8601430095EE7D /* Preview Assets.xcassets in Resources */,
+				43F7F8BF2AA197D600ACC0C3 /* Poppins-Light.ttf in Resources */,
 				4354FECC2A98A02D00D8AAB2 /* BasicStrategy_Split.json in Resources */,
 				4354FECD2A98A02D00D8AAB2 /* BasicStrategy_Hard.json in Resources */,
 				4354A99D2A8601430095EE7D /* Assets.xcassets in Resources */,
@@ -317,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7F8C02AA197D600ACC0C3 /* Poppins-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7F8C12AA197D600ACC0C3 /* Poppins-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,19 +418,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7F8CF2AA19FA200ACC0C3 /* GameAction.swift in Sources */,
+				43F7F8DB2AA1A90C00ACC0C3 /* FlipView.swift in Sources */,
 				4354A99B2A8601420095EE7D /* ContentView.swift in Sources */,
 				4354FED22A98A42600D8AAB2 /* JSON.swift in Sources */,
 				4354A9C32A86015A0095EE7D /* Card.swift in Sources */,
+				43F7F8CB2AA19DE500ACC0C3 /* CoinView.swift in Sources */,
+				43F7F8E92AA2FF8D00ACC0C3 /* SettingView.swift in Sources */,
+				430456C62AA192D500CD4E8B /* TitleView.swift in Sources */,
 				4354FEB72A985F1D00D8AAB2 /* CardView.swift in Sources */,
+				43F7F8D72AA1A4DA00ACC0C3 /* PlayerCardStacks.swift in Sources */,
+				43F7F8D32AA1A22800ACC0C3 /* GameActions.swift in Sources */,
 				4354FEBC2A9860ED00D8AAB2 /* CardState.swift in Sources */,
 				4354FEC62A9889F400D8AAB2 /* ArrCardState.swift in Sources */,
-				4354FEBE2A9861A400D8AAB2 /* DealerCardStack.swift in Sources */,
+				43F7F8BD2AA1958700ACC0C3 /* MoneyBoxView.swift in Sources */,
+				43F7F8C32AA19B9D00ACC0C3 /* BetAmountView.swift in Sources */,
+				43F7F8E02AA1AB2500ACC0C3 /* Biding+Equatable.swift in Sources */,
+				4354FEBE2A9861A400D8AAB2 /* HouseCardStack.swift in Sources */,
+				43F7F8E42AA2F6D200ACC0C3 /* InfoView.swift in Sources */,
 				4354FED02A98A06200D8AAB2 /* StrategyController.swift in Sources */,
 				4354FEC42A98899C00D8AAB2 /* GameActionType.swift in Sources */,
 				4354FEC02A9861FF00D8AAB2 /* GameController.swift in Sources */,
 				4354FEC22A98653B00D8AAB2 /* GameState.swift in Sources */,
 				4354A9992A8601420095EE7D /* BlackJackApp.swift in Sources */,
 				4354FEB92A98606C00D8AAB2 /* CardStack.swift in Sources */,
+				43F7F8C72AA19CC000ACC0C3 /* CoinDeckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +450,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7F8D82AA1A4DA00ACC0C3 /* PlayerCardStacks.swift in Sources */,
+				43F7F8C82AA19CC000ACC0C3 /* CoinDeckView.swift in Sources */,
+				43F7F8CC2AA19DE500ACC0C3 /* CoinView.swift in Sources */,
+				43F7F8D02AA19FA200ACC0C3 /* GameAction.swift in Sources */,
+				43F7F8C42AA19B9D00ACC0C3 /* BetAmountView.swift in Sources */,
 				4354A9AA2A8601430095EE7D /* BlackJackTests.swift in Sources */,
+				43F7F8D42AA1A22800ACC0C3 /* GameActions.swift in Sources */,
+				43F7F8DC2AA1A90C00ACC0C3 /* FlipView.swift in Sources */,
+				43F7F8E52AA2F6D200ACC0C3 /* InfoView.swift in Sources */,
+				43F7F8E12AA1AB2500ACC0C3 /* Biding+Equatable.swift in Sources */,
+				43F7F8EA2AA2FF8D00ACC0C3 /* SettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,8 +468,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F7F8CD2AA19DE500ACC0C3 /* CoinView.swift in Sources */,
+				43F7F8E62AA2F6D200ACC0C3 /* InfoView.swift in Sources */,
+				43F7F8DD2AA1A90C00ACC0C3 /* FlipView.swift in Sources */,
+				43F7F8D92AA1A4DA00ACC0C3 /* PlayerCardStacks.swift in Sources */,
+				43F7F8D12AA19FA200ACC0C3 /* GameAction.swift in Sources */,
+				43F7F8C92AA19CC000ACC0C3 /* CoinDeckView.swift in Sources */,
 				4354A9B42A8601430095EE7D /* BlackJackUITests.swift in Sources */,
+				43F7F8D52AA1A22800ACC0C3 /* GameActions.swift in Sources */,
+				43F7F8E22AA1AB2500ACC0C3 /* Biding+Equatable.swift in Sources */,
+				43F7F8EB2AA2FF8D00ACC0C3 /* SettingView.swift in Sources */,
 				4354A9B62A8601430095EE7D /* BlackJackUITestsLaunchTests.swift in Sources */,
+				43F7F8C52AA19B9D00ACC0C3 /* BetAmountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +623,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BlackJack/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlackJack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -535,6 +652,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BlackJack/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlackJack/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

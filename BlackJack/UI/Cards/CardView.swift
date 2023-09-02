@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     @Binding var cardState: CardState
+    
     var body: some View {
         GeometryReader { geo in
                     RoundedRectangle(cornerRadius: geo.size.height / 8)
@@ -35,7 +36,7 @@ struct CardView: View {
                    Spacer()
                }
                .font(.system(size: geo.size.height / 5))
-               .foregroundColor(cardState.card.suit.color)
+               .foregroundColor(cardState.card.suit.cardColor)
            } back: {
                Image("card-back")
                    .resizable()

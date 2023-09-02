@@ -94,7 +94,7 @@ class GameController: ObservableObject {
         let playerCardsCount = playerCards.blackJackCount.amount
         let outcome: GameState.OutComeState
         
-        if playerCardsCounts > 21 {
+        if playerCardsCount > 21 {
             outcome = .playerBust
         }
         else if houseCardsCount == playerCardsCount {
@@ -118,7 +118,7 @@ class GameController: ObservableObject {
         }
         
         if isSplit {
-            change(to: outcome(multiple([outcome, splitOutcome()])))
+            change(to: .outcome(.multiple([outcome, splitOutcome()])))
         }
     }
     

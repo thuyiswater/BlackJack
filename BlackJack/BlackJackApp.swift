@@ -9,8 +9,9 @@ import SwiftUI
 
 @main
 struct BlackJackApp: App {
-    @StateObject var gameController = GameController
-    @StateObject var stragegyController = StragegyController
+    @StateObject var gameController = GameController()
+    @StateObject var stragegyController = StrategyController()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
