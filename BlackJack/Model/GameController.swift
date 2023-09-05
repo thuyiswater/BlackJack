@@ -33,6 +33,7 @@ class GameController: ObservableObject {
 
     @Published var consecutiveWins: Int = 0
     @Published var countRound = 0
+    @Published var showEndView = false
     
     var isSplit: Bool {
         !splitCards.isEmpty
@@ -228,13 +229,11 @@ class GameController: ObservableObject {
         case .betting:
             reset()
             if balance < 9 {
-                balance = 2500
-                bettingAmount = 50
+                showEndView = true
             }
         case .playerTurn:
             if balance < 9 {
-                balance = 2500
-                bettingAmount = 50
+                showEndView = true
                 deal()
 
             } else if bettingAmount > balance {
@@ -305,4 +304,6 @@ class GameController: ObservableObject {
             bettingAmount *= 3
         }
     }
+    
+    
 }

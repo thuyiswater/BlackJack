@@ -52,7 +52,7 @@ The dealer wins if:
 
 If there is a tie in the player card count and dealer card count, you have a push and bets are returned. If you win, you get your bet back times 2. If you lose, the house takes your bet.
 
-Blackjacks result in 1.5 times the amount you bet.
+Blackjacks result in 2 times the amount you bet.
 """
 
 
@@ -107,8 +107,10 @@ Blackjacks result in 1.5 times the amount you bet.
 }
 
 struct Info_Previews: PreviewProvider {
+    static let gameController = GameController()
     static var previews: some View {
         InfoView()
             .frame(width: 200, height: 500)
+            .environmentObject(gameController)
     }
 }

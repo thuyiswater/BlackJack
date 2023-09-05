@@ -7,10 +7,17 @@
 
 import SwiftUI
 
+//struct User: Codable {
+//    var id: UUID
+//    var username: String
+//    var winning_streak: String
+//    var image: String
+//}
+
 struct SignInView: View {
     @EnvironmentObject var gameController: GameController
     @EnvironmentObject var strategyController: StrategyController
-    @State private var username = ""
+    @State private var name = ""
 
     var body: some View {
         NavigationStack {
@@ -19,7 +26,7 @@ struct SignInView: View {
                     .font(.largeTitle)
                     .padding(.bottom, 20)
 
-                TextField("Username", text: $username)
+                TextField("Username", text: $name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
@@ -30,12 +37,18 @@ struct SignInView: View {
                         .font(.custom("Poppins-Light", size: 20))
                         .foregroundColor(.black)
                 }
+                .padding()
                 
-                
+                NavigationLink(destination: LeaderBoard(name: $name)) {
+                    Text("Leaderboard")
+                        .font(.custom("Poppins-Light", size: 20))
+                        .foregroundColor(.black)
+                }
             }
             .padding()
         }
     }
+    
 }
 
 struct SignInView_Previews: PreviewProvider {

@@ -31,8 +31,12 @@ struct ContentView: View {
             // Stack vertically arranged views in a VStack.
             VStack {
                 // Display the game title.
+                
                 TitleView("BlackJack  ♥️♦️♣️♠️")
-
+                Spacer()
+                HStack {
+                    
+                }
                 Text("Winning Streak: " + String(gameController.consecutiveWins))
                     .font(.custom("Poppins-Medium", size: 17))
                     .foregroundColor(.white)
@@ -61,6 +65,9 @@ struct ContentView: View {
                         .padding(.bottom, 32)
                 }
             }
+            .fullScreenCover(isPresented: $gameController.showEndView) {
+               LoseView()
+            }
             
             // If the 'showDirections' flag is true, display directions overlay.
             if gameController.showDirections {
@@ -86,11 +93,6 @@ struct ContentView: View {
                 // Show the settings view.
                 SettingView()
             }
-            
-//            if gameController.balance < 9 {
-//                Text("Hi")
-//          }
-            
         }
     }
 

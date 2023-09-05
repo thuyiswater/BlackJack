@@ -45,19 +45,6 @@ struct MoneyBoxView: View {
                     .padding(.leading, -8)
                     .transition(.scale(scale: 20))
                 Spacer()
-                // An image button to reset the game and set initial values.
-                Image(systemName: "arrow.clockwise.circle.fill")
-                    .resizable()
-                    .frame(width: 35, height: 35)
-                    .foregroundColor(.orange)
-                    .background(Color.white.cornerRadius(25))
-                    .accessibility(addTraits: .isButton)
-                    .onTapGesture {
-                        gameController.reset()
-                        gameController.change(to: .betting)
-                        gameController.balance = 1500
-                        gameController.bettingAmount = 50
-                    }
                 // An image button to toggle the display of game directions.
                 Image(systemName: "info.circle.fill")
                     .resizable()

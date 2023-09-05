@@ -86,4 +86,5 @@ struct JSON: RandomAccessCollection {
     subscript(dynamicMember key: String) -> JSON {
         optionalDictionary?[key] ?? JSON(value: nil)
     }
+    
 }
