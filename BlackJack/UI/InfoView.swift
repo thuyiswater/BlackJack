@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct InfoView: View {
+    // Accesses the GameController environment object to control game-related state.
     @EnvironmentObject var gameController: GameController
 
+    // Static constant containing the introduction and rules of the game.
     static let introduction = """
 Overview:
 
@@ -56,6 +58,7 @@ Blackjacks result in 1.5 times the amount you bet.
 
     var body: some View {
         ZStack {
+            // A rounded rectangle with a background color for the information screen.
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color("background"))
 
@@ -63,6 +66,7 @@ Blackjacks result in 1.5 times the amount you bet.
                 VStack(alignment: .center) {
                     HStack {
                         Spacer()
+                        // An "X" button to close the information screen.
                         Image(systemName: "xmark.circle.fill")
                             .resizable()
                             .foregroundColor(.white)
@@ -73,6 +77,7 @@ Blackjacks result in 1.5 times the amount you bet.
                                 gameController.showDirections.toggle()
                             }
                     }
+                    // An image representing the app icon.
                     Image("app-icon")
                         .resizable()
                         .frame(width: 100, height: 100)
@@ -80,12 +85,14 @@ Blackjacks result in 1.5 times the amount you bet.
                         .cornerRadius(24)
                         .padding()
 
+                    // Welcoming text.
                     Text("Welcome to BlackJack")
                         .font(.custom("Poppins-Medium", size: 25))
                         .bold()
                         .foregroundColor(.white)
                         .padding()
 
+                    // Text presenting the game introduction and rules.
                     Text(InfoView.introduction)
                         .bold()
                         .multilineTextAlignment(.leading)

@@ -31,6 +31,9 @@ class GameController: ObservableObject {
     @Published var splitCards = [CardState]()
     @Published var splitDeckActive = false
 
+    @Published var consecutiveWins: Int = 0
+    @Published var countRound = 0
+    
     var isSplit: Bool {
         !splitCards.isEmpty
     }
@@ -224,10 +227,26 @@ class GameController: ObservableObject {
         switch newState {
         case .betting:
             reset()
+            if balance < 9 {
+                balance = 2500
+                bettingAmount = 50
+            }
         case .playerTurn:
-            balance -= bettingAmount
-            print("New balance \(balance)")
-            deal()
+            if balance < 9 {
+                balance = 2500
+                bettingAmount = 50
+                deal()
+
+            } else if bettingAmount > balance {
+                bettingAmount = balance
+                balance = 0
+                deal()
+            }
+            else {
+                balance -= bettingAmount
+                print("New balance \(balance)")
+                deal()
+            }
         case .houseTurn:
             splitDeckActive = false
             houseCards.last?.isHidden = false
@@ -261,15 +280,29 @@ class GameController: ObservableObject {
     func updateBalance(for outcome: GameState.OutcomeState) {
         switch outcome {
         case .playerBlackjack:
-            balance += bettingAmount * 2 + Int(ceil(Double(bettingAmount / 2)))
+            balance += bettingAmount + (bettingAmount * 2)
+            consecutiveWins += 1 // Increment consecutive wins
         case .houseBust, .playerWin:
             balance += bettingAmount * 2
+            consecutiveWins += 1 // Increment consecutive wins
         case .push:
             balance += bettingAmount
+            consecutiveWins = 0 // Reset consecutive wins on a push
         case .houseBlackjack, .houseWin, .playerBust:
             print("House win of $\(bettingAmount)")
+            consecutiveWins = 0 // Reset consecutive wins
         case .multiple(let outcomes):
             outcomes.forEach { updateBalance(for: $0) }
+        }
+    }
+    
+    func adjustBettingAmount() {
+        let difficultyLevel = 1.0
+
+        if difficultyLevel == 2 {
+            bettingAmount *= 2
+        } else if difficultyLevel == 3 {
+            bettingAmount *= 3
         }
     }
 }

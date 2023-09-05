@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CoinDeckView: View {
+    // Accesses the GameController environment object to interact with game data.
     @EnvironmentObject var gameController: GameController
 
     var body: some View {
         VStack {
             HStack {
+                // Button to clear the current bet amount.
                 Button(action: {
                     gameController.bettingAmount = 0
                 }, label: {
@@ -22,6 +24,7 @@ struct CoinDeckView: View {
                         .background(Color.white.cornerRadius(8))
                 })
 
+                // Button to initiate dealing the cards.
                 Button(action: {
                     gameController.change(to: .playerTurn)
                 }, label: {
@@ -32,6 +35,7 @@ struct CoinDeckView: View {
                 })
             }
             HStack {
+                // Display different coin values as selectable CoinView components.
                 CoinView(amount: 500)
                 CoinView(amount: 100)
                 CoinView(amount: 50)

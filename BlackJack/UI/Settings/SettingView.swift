@@ -10,6 +10,10 @@ import SwiftUI
 struct SettingView: View {
     @EnvironmentObject var gameController: GameController
     @EnvironmentObject var strategyController: StrategyController
+    
+    @State private var difficultyLevel: Double = UserDefaults.standard.double(forKey: "DifficultyLevel")
+//    @State private var soundEnabled: Bool = true
+//    @State private var bettingAmount: Double = 50.0
 
     var body: some View {
         ZStack {
@@ -32,20 +36,38 @@ struct SettingView: View {
 
                     Text("Basic Strategy")
                         .bold()
-                        .font(.title2)
+                        .font(.custom("Poppins-Medium", size: 25))
                         .multilineTextAlignment(.leading)
                         .padding()
 
                     Toggle(isOn: $strategyController.showHint) {
                         VStack(alignment: .leading, spacing: 4) {
                             Text("Show Hints")
+                                .font(.custom("Poppins-Light", size: 17))
                                 .bold()
                             Text("Display basic strategy hints to learn to optimize chance of win.")
                                 .fixedSize(horizontal: false, vertical: true)
-                                .font(.caption)
+                                .font(.custom("Poppins-Light", size: 10))
                         }
                     }
                     .padding()
+                    
+                    Section(header: Text("Game Difficulty")) {
+                        Slider(value: $difficultyLevel, in: 1.0...3.0, step: 1.0) {
+                            Text("Difficulty Level")
+                        }
+                        Text("Current Difficulty: \(Int(difficultyLevel))")
+                            .padding(.bottom, 20)
+                    }
+                    .onChange(of: difficultyLevel) { newValue in
+                        UserDefaults.standard.set(newValue, forKey: "DifficultyLevel")
+                    }
+//                    Section(header: Text("Betting Amount")) {
+//                        Slider(value: $bettingAmount, in: 10.0...500.0, step: 10.0) {
+//                            Text("Betting Amount")
+//                        }
+//                        Text("Current Bet: $\(Int(bettingAmount))")
+//                    }
 
                     key
                         .padding(.horizontal)
@@ -89,8 +111,11 @@ struct SettingView: View {
 }
 
 struct SettingView_Previews: PreviewProvider {
+    static let strategyController = StrategyController()
+    
     static var previews: some View {
         SettingView()
+            .environmentObject(strategyController)
     }
 }
 
